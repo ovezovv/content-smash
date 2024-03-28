@@ -1,5 +1,4 @@
-import Preview from '@/components/Preview'
-import Search from '@/components/Search'
+import Details from '@/components/Details'
 import api from '@/lib/api'
 import React from 'react'
 
@@ -22,9 +21,8 @@ const ContentItem = async ({ params }: {
   const data = await getData(params.id);
 
   return (
-    <div className='flex flex-row bg-secodary bg-secondary h-screen rounded'>
-      <Search />
-      <Preview />
+    <div className='bg-secodary bg-secondary h-screen rounded'>
+      <Details contentData={data} />
     </div>
   )
 }
