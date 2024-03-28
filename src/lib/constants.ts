@@ -65,10 +65,29 @@ const animalData = [{
 },{
   uid: 318,
   img: "https://cataas.com/cat",
-}]
+}];
+
+const menuData: IMenu = [
+  {
+    id: 1,
+    type: 'dog',
+    title: 'Dog'
+  },
+  {
+    id: 2,
+    type: 'cat',
+    title: 'Cat'
+  },
+  {
+    id: 3,
+    type: 'animal',
+    title: 'Animal'
+  }
+]
 
 export {
   dogData,
   catData,
-  animalData
+  animalData,
+  menuData
 }

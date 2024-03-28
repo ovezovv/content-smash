@@ -8,9 +8,11 @@ interface CustomAxiosRequestConfig extends AxiosRequestConfig {
   };
 }
 
-const mock = new MockAdapter(axios, { delayResponse: 100 });
+const api = axios.create();
 
-mock.onGet('/api/content').reply((config: CustomAxiosRequestConfig) => {
+const mock = new MockAdapter(api, { delayResponse: 100 });
+
+mock.onGet('http://localhost:5000/api/content').reply((config: CustomAxiosRequestConfig) => {
   switch (config.params?.type) {
     case "dog":
       return [200, {
@@ -32,4 +34,4 @@ mock.onGet('/api/content').reply((config: CustomAxiosRequestConfig) => {
   }
 });
 
-export default axios;
+export default api;
