@@ -2,7 +2,7 @@ import React from 'react'
 
 const PreviewContent = () => {
   return (
-    <div>PreviewContent</div>
+    <div className='w-2/3 bg-cyan-700'>PreviewContent</div>
   )
 }
 

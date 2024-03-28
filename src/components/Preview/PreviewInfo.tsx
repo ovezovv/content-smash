@@ -2,7 +2,7 @@ import React from 'react'
 
 const PreviewInfo = () => {
   return (
-    <div>PreviewInfo</div>
+    <div className='w-1/3 bg-yellow-600'>PreviewInfo</div>
   )
 }
 

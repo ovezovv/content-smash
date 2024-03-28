@@ -20,9 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <main className="flex min-h-screen flex-row items-center justify-between p-12 bg-dark">
+        <main className="flex min-h-screen flex-row justify-between p-4 no-grow bg-dark">
           <SideMenu />
-          <div className="">
+          <div className="grow">
             {children}
           </div>
         </main>

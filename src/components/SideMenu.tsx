@@ -1,14 +1,42 @@
 import Link from 'next/link'
 import React from 'react'
 
+type IMenu = {
+  id: number;
+  type: "dog" | "cat" | "animal" | string;
+  title: string;
+}[]
+
+const MENU: IMenu = [
+  {
+    id: 1,
+    type: 'dog',
+    title: 'Dog'
+  },
+  {
+    id: 2,
+    type: 'cat',
+    title: 'Cat'
+  },
+  {
+    id: 3,
+    type: 'animal',
+    title: 'Animal'
+  }
+]
+
 const SideMenu = () => {
-
-
   return (
-    <div className='flex flex-column'>
-      <Link href="/content/123" >
-        <p className='ml-2 p-1 px-8 bg-gradient-to-r from-blue-500 to-teal-500 rounded-lg font-mono'>Dog</p>
-      </Link>
+    <div className='flex flex-col w-40 px-2'>
+      {MENU.length && MENU.map((item => (
+        <Link 
+          key={item.id}
+          href={`/content/${item.type}`}
+          className='mb-2 p-1 px-8 bg-secondary rounded font-mono text-gray-300 border-1'
+        >
+          {item.title}
+        </Link>
+      )))}
     </div>
   )
 }
