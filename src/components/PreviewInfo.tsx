@@ -5,7 +5,7 @@ const PreviewInfo = ({description}: {
 }) => {
   return (
     <div className='w-1/3 text-center my-auto'>
-        <p className='text-white text-xl'>{description}</p>
+        <p className='text-white text-md'>{description}</p>
     </div>
   )
 }
